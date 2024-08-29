@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    button {
+        background-color: whitesmoke;
+
+    }
+
+    #time {
+        padding: 10px 10px;
+    }
+
+    #mulai-button {
+        border: 1px solid;
+        border-radius: 5px;
+        background-color: green;
+        color: white;
+        padding: 8px 10px;
+    }
+
+    #berhenti-button {
+        border: 1px solid;
+        border-radius: 5px;
+        background-color: green;
+        color: white;
+        padding: 8px 10px;
+    }
+
+    .button-container button {
+        display: block;
+        margin: auto;
+        width: 15%;
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <div id="hitung">Hitung Mundur </div>
+    <div id="time">10 </div>
+    <div class="button-container">
+        <button id="mulai-button">Mulai</button>
+        <button id="berhenti-button">Berhenti</button>
+    </div>
+    <script>
+        let waktuInterval;
+        let waktu = 10;
+
+        function mulaiWaktu() {
+            waktuInterval = setInterval(() => {
+                document.getElementById("mulai-button").disabled = true;
+                document.getElementById("berhenti-button").disabled = false;
+                waktu--;
+                document.getElementById("time").innerHTML = ` ${waktu}`;
+                if (waktu <= 0) {
+                    clearInterval(waktuInterval);
+                    document.getElementById("time").innerHTML = "<span style=color:red;>Waktu Habis</span>";
+                }
+            }, 1000);
+        }
+
+        function berhentiWaktu() {
+            clearInterval(waktuInterval);
+            document.getElementById("mulai-button").disabled = false;
+            document.getElementById("berhenti-button").disabled = true;
+            document.getElementById("hitung").innerHTML = `Hitung Mundur`;
+        }
+
+        document.getElementById("mulai-button").addEventListener("click", mulaiWaktu);
+        document.getElementById("berhenti-button").addEventListener("click", berhentiWaktu);
+    </script>
+
+</body>
+
+</html>

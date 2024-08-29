@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+
+        .navbar {
+            background-color: black;
+            overflow: hidden;
+            padding: 10px 15px;
+            position: fixed;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 34px 30px;
+            text-decoration: none;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 5px 15px ;
+            margin-right: auto;
+        }
+
+        .main-content {
+            padding: 100px 20px 20px;
+            text-align: center;
+        }
+
+        .product-list {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+
+        .product {
+            background-color: white;
+            border: 1px solid #dddddd;
+            border-radius: 10px;
+            width: 30%;
+            padding: 15px;
+            text-align: left;
+        }
+
+        .product img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .product h3 {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .product p {
+            font-size: 14px;
+            color: black;
+        }
+
+        .product .sepatu {
+            margin-top: 10px;
+            font-size: 14px;
+            color: black;
+        }
+
+        .product .read-more {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .product .icon {
+            margin-right: 5px;
+        }
+    </style>
+    <div class="navbar">
+        <div class="logo"><img width="80" height="80" img src="image/Taa4.png" alt=""></div>
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Contact</a>
+    </div>
+    <div class="main-content">
+        <h1>Selamat Datang di Taa4 Store!</h1>
+        <p>Temukan produk terbaik dengan harga terjangkau hanya di sini.</p>
+
+        <div class="product-list">
+            <div class="product">
+                <img src="image/nb st.jpg" alt="Produk 1">
+                <h3>New Balance 574 Legacy x Stone Island</h3>
+                <p>Deskripsi singkat tentang produk ini. Produk berkualitas tinggi dan tahan lama.</p>
+                <div class="sepatu">
+                    <i class="fas fa-shopping-cart icon"></i>Total Pembelian: 150 |
+                    <i class="fas fa-heart icon"></i>Total Like: 75
+                </div>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+
+            <div class="product">
+                <img src="image/samba.jpg" alt="Produk 2">
+                <h3>Adidas Samba OG Cloud White Core Black</h3>
+                <p>Deskripsi singkat tentang produk ini. Produk ini populer dan banyak diminati.</p>
+                <div class="sepatu">
+                    <i class="fas fa-shopping-cart icon"></i>Total Pembelian: 200 |
+                    <i class="fas fa-heart icon"></i>Total Like: 90
+                </div>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+
+            <div class="product">
+                <img src="image/superstar.jpg" alt="Produk 3">
+                <h3>Adidas Superstar Foundation</h3>
+                <p>Deskripsi singkat tentang produk ini. Produk berkualitas tinggi dengan harga terjangkau.</p>
+                <div class="sepatu">
+                    <i class="fas fa-shopping-cart icon"></i>Total Pembelian: 180 |
+                    <i class="fas fa-heart icon"></i>Total Like: 80
+                </div>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

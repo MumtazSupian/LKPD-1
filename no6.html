@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    .input-text {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .box-input {
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        transition: border-color 0.3s ease;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: #919293;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    h5 {
+        font-size: 18px;
+        color: black;
+        text-align: center;
+        margin-top: 20px;
+    }
+</style>
+
+<body>
+    <div>
+        <div>
+            <div class="input-text">
+                <input class="box-input" type="date" name="date" id="date">
+                <button id="btn">Submit</button>
+            </div>
+            <div>
+                <h5 id="result">Tidak Mencari Data</h5>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const btn = document.getElementById('btn');
+        const date = document.getElementById('date');
+        const result = document.getElementById('result');
+
+        btn.addEventListener('click', function () {
+            if (date.value) {
+                const dateObj = new Date(date.value);
+                const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                const formattedDate = dateObj.toLocaleDateString('id-ID', options);
+
+                result.innerHTML = `Mencari data tanggal <span style="color:blue;""> ${formattedDate}</span>`;
+            } else {
+                result.innerHTML = "Tidak mencari data";
+            }
+        });
+    </script>
+</body>
+
+</html>

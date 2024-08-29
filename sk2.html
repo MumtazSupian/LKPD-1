@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="Kategori">Perekomendasi</label><br>
+        <select name="Kategori" id="Kategori" onchange="changeLabel(this)">
+            <option value="A">Ada</option>
+            <option value="T">Tidak</option>
+        </select><br><br>
+
+        <div id="name_wrapper" style="display:none;">
+            <label for="nama">Nama Lengkap Perekomendasi</label><br>
+            <input type="text" id="name" name="name_lengkap"><br><br>
+    
+            <label for="jabatan">Kategori Perekomendasi*</label><br>
+            <select id="jabatan" name="jabatan" onchange="tgJabatan(this)">
+                <option value="Pekerja BRI">Pekerja BRI</option>
+                <option value="Purnabakti">Purnabakti</option>
+            </select><br><br>
+    
+            <label for="nama">Nomor ID Pegawai/KTA/PN/MP</label><br>
+            <input type="text" id="name" name="name_lengkap"><br><br>
+    
+            <div id="jabatan3">
+                <label for="nama">Jabatan Perekomendasi</label><br>
+            <input type="text" id="name" name="name_lengkap"><br><br>
+            </div>
+        </div>
+        <button type="button" onclick="">Selanjutnya</button>
+    </form>
+    <script>
+        function changeLabel(e) {
+            let nameWrapper = document.getElementById("name_wrapper");
+            if (e.value == "A") {
+                nameWrapper.style.display = "block";
+            } else {
+                nameWrapper.style.display = "none";
+            }
+        }
+        function tgJabatan(e) {
+            let nameWrapper = document.getElementById("jabatan3");
+            if (e.value == "Pekerja BRI") {
+                nameWrapper.style.display = "block";
+            } else {
+                nameWrapper.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
